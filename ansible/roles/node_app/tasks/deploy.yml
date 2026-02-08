@@ -10,14 +10,14 @@
   git:
     repo: 'https://github.com/Daavidmp/ansible.git'
     dest: /home/deploy/apps/myapp
-    version: "{{ git_ref | default('main') }}"
+    version: main
     force: yes
   become: no
 
 - name: Install npm dependencies
   command: npm install
   args:
-    chdir: /home/deploy/apps/myapp/app <-- ¡CORRECCION IMPORTANTE!
+    chdir: /home/deploy/apps/myapp/app
 
 - name: Copy systemd service file
   template:
