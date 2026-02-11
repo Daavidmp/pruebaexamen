@@ -8,7 +8,7 @@
 
 - name: Checkout app code
   git:
-    repo: 'https://github.com/Daavidmp/ansible.git'
+    repo: 'https://github.com/Daavidmp/pruebaexamen.git'
     dest: /home/deploy/apps/myapp
     version: main
     force: yes
